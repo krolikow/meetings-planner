@@ -3,7 +3,6 @@ package com.github.krolikow.meetingsplanner.meetings;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.Duration;
 import java.time.LocalDateTime;
 
 @Entity
