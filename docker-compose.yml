@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=meetings-planner-db'
+      - 'POSTGRES_PASSWORD=postgres'
+      - 'POSTGRES_USER=postgres'
+    volumes:
+      - 'data:/var/lib/postgresql/data'
+    ports:
+      - '5433:5432'
+
+volumes:
+  data:
