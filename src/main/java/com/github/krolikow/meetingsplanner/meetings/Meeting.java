@@ -24,6 +24,6 @@ public class Meeting {
     @Column(name = "start_date")
     private LocalDateTime startDate;
 
-    @Column(name = "duration")
-    private Duration duration;
+    @Column(name = "end_date")
+    private LocalDateTime endDate;
 }
