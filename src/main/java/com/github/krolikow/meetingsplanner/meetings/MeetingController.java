@@ -3,7 +3,6 @@ package com.github.krolikow.meetingsplanner.meetings;
 import com.github.krolikow.meetingsplanner.common.exceptions.MeetingNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -43,10 +42,6 @@ public class MeetingController {
 
     @DeleteMapping("/{meetingId}")
     public void deleteMeeting(@PathVariable int meetingId) {
-        Meeting meeting = meetingService.findById(meetingId);
-        if (meeting == null) {
-            throw new MeetingNotFoundException(meetingId);
-        }
         meetingService.deleteById(meetingId);
     }
 }
