@@ -2,6 +2,7 @@ plugins {
     java
     id("org.springframework.boot") version "3.2.3"
     id("io.spring.dependency-management") version "1.1.4"
+    id("org.flywaydb.flyway") version "9.22.3"
 }
 
 group = "com.github.krolikow"
@@ -9,6 +10,13 @@ version = "0.0.1-SNAPSHOT"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
+}
+
+flyway{
+    url = "jdbc:postgresql://localhost:5433/meetings-planner-db"
+    user = "postgres"
+    password = "postgres"
+    driver = "org.postgresql.Driver"
 }
 
 configurations {
